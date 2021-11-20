@@ -54,3 +54,11 @@ Changelog Legend :
 >Also added a visual effect on hit.
 <br/><br/>
 
+>## 0.0.4
+>11/20/2021 • 10:35AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>Added a 2D gun sprite to the UI, awith a shooting animation.
+>
+>Also added ammo items, that can be picked up and gives the player n amout of bullets.
+<br/><br/>
