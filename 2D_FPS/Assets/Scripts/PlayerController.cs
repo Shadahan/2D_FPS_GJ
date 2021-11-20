@@ -49,16 +49,23 @@ public class PlayerController : MonoBehaviour
 
 
         //Player Shooting
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0))
+        {
             if(currentAmmo > 0){
                 Ray ray = viewCam.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit)){
-                Instantiate(bulletImpact, hit.point, transform.rotation);
-                //Debug.Log("i'm looking at " + hit.transform.name);
-            } else {
+                RaycastHit hit;
+                if(Physics.Raycast(ray, out hit))
+                {
+                    Instantiate(bulletImpact, hit.point, transform.rotation);
+                
+                    if(hit.transform.tag == "Enemy")
+                    {
+                        hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
+                    }
+                } else 
+                {
                 Debug.Log("I'm looking at nothing");
-            }
+                }
             }
 
             currentAmmo--;
