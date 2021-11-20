@@ -62,3 +62,10 @@ Changelog Legend :
 >
 >Also added ammo items, that can be picked up and gives the player n amout of bullets.
 <br/><br/>
+
+>## 0.0.5
+>11/20/2021 • 11:23AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>Added an enemy with a script attached to it. The enemy can chase the Player if he/she is in range. The enemy can be killed(with death animation).
+<br/><br/>
