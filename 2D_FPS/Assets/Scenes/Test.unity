@@ -834,7 +834,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &124107038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,9 +848,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theRB: {fileID: 124107037}
-  viewCam: {fileID: 815044147}
+  viewCam: {fileID: 815044146}
+  bulletImpact: {fileID: 3747194968630094412, guid: 4f384fc2eac512b40965496d60ecff95, type: 3}
   moveSpeed: 5
   mouseSensitivity: 1
+  currentAmmo: 15
 --- !u!4 &124107039
 Transform:
   m_ObjectHideFlags: 0
@@ -6893,11 +6895,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1255627493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 06386c6e2c76a424cade2af9cc6ec392, type: 3}
+  m_PrefabInstance: {fileID: 1453603492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1255627494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 06386c6e2c76a424cade2af9cc6ec392, type: 3}
   m_PrefabInstance: {fileID: 1453603492}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1255627497
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255627493}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1}
+  m_Center: {x: 0, y: 0.000000059604645, z: -0.5}
 --- !u!1 &1281918482
 GameObject:
   m_ObjectHideFlags: 0
