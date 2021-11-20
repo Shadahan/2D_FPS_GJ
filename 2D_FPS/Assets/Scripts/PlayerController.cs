@@ -5,13 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D theRB;
-    public Transform viewCam;
+    public Camera viewCam;
+
+    public GameObject bulletImpact;
 
     private Vector2 moveInput;
     private Vector2 mouseInput;
 
     public float moveSpeed = 5f;
     public float mouseSensitivity = 1f;
+    public int currentAmmo = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,23 @@ public class PlayerController : MonoBehaviour
         mouseInput = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y")) * mouseSensitivity;
 
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z - mouseInput.x); //These two lines are the same idea, but with different implementations
-        viewCam.localRotation = Quaternion.Euler(viewCam.localRotation.eulerAngles + new Vector3(0f, mouseInput.y, 0f));
+        viewCam.transform.localRotation = Quaternion.Euler(viewCam.transform.localRotation.eulerAngles + new Vector3(0f, mouseInput.y, 0f));
+
+
+        //Player Shooting
+        if(Input.GetMouseButtonDown(0)){
+            if(currentAmmo > 0){
+                Ray ray = viewCam.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit)){
+                Instantiate(bulletImpact, hit.point, transform.rotation);
+                //Debug.Log("i'm looking at " + hit.transform.name);
+            } else {
+                Debug.Log("I'm looking at nothing");
+            }
+            }
+
+            currentAmmo--;
+        }
     }
 }
