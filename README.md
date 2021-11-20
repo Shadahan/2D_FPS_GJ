@@ -37,5 +37,11 @@ Changelog Legend :
 > <span style="color:green">**Green**</span>
 >
 >Added temporary assets and character controller script.
-:<br/><br/>
+<br/><br/>
 
+>## 0.0.2
+>11/20/2021 • 6:55AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>Added a test wall and colliders, both to the wall and the player.
+<br/><br/>
