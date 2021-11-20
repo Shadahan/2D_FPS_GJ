@@ -45,3 +45,12 @@ Changelog Legend :
 >
 >Added a test wall and colliders, both to the wall and the player.
 <br/><br/>
+>## 0.0.3
+>11/20/2021 • 8:14AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>Added a shooting mechanic based on Raycast, and a 3D Box collider on the wall model so that it interacts with the shooting raycast.
+>
+>Also added a visual effect on hit.
+<br/><br/>
+
