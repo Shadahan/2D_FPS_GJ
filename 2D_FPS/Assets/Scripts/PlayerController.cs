@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public Rigidbody2D theRB;
     public Camera viewCam;
+    public Animator gunAnim;
 
     public GameObject bulletImpact;
 
@@ -15,6 +18,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float mouseSensitivity = 1f;
     public int currentAmmo = 15;
+
+    private void Awake() 
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +62,7 @@ public class PlayerController : MonoBehaviour
             }
 
             currentAmmo--;
+            gunAnim.SetTrigger("Shoot");
         }
     }
 }
