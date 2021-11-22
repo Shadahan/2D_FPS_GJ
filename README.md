@@ -86,3 +86,10 @@ Changelog Legend :
 >- Fixed issues with ammo & health pickup where ammo count could go negative and healthpickups could oveheal the player.
 >- Hiden mouse cursor during gameplay, escape to bring it back.
 <br/><br/>
+
+>## 0.0.8
+>11/22/2021 • 10:42AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>- Added head bubbing during movement of the player.
+<br/><br/>
