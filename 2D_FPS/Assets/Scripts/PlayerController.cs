@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D theRB;
     public Camera viewCam;
     public Animator gunAnim;
+    public Animator playerAnim; //generic, maybe change to smth more specific, related 
 
     public GameObject bulletImpact;
 
@@ -86,6 +87,13 @@ public class PlayerController : MonoBehaviour
                     }
                 }
                 UpdateAmmoUI();
+            }
+
+            if(moveInput != Vector2.zero){
+                playerAnim.SetBool("isMoving", true);
+            } else 
+            {
+                playerAnim.SetBool("isMoving", false);
             }
         }
     }

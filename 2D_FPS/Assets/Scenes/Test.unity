@@ -864,6 +864,7 @@ GameObject:
   - component: {fileID: 124107038}
   - component: {fileID: 124107037}
   - component: {fileID: 124107040}
+  - component: {fileID: 124107041}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -907,6 +908,7 @@ MonoBehaviour:
   theRB: {fileID: 124107037}
   viewCam: {fileID: 815044146}
   gunAnim: {fileID: 1966671769}
+  playerAnim: {fileID: 124107041}
   bulletImpact: {fileID: 3747194968630094412, guid: 4f384fc2eac512b40965496d60ecff95, type: 3}
   moveSpeed: 5
   mouseSensitivity: 1
@@ -948,6 +950,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!95 &124107041
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124107036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f0a81a69af63504db582be0b2bbae4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &127181456
 GameObject:
   m_ObjectHideFlags: 0
