@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 100;
     public GameObject deadScreen;
 
+    public TMP_Text healthText, ammoText;
+
     private void Awake() 
     {
         instance = this;
@@ -33,6 +36,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        UpdateHealthUI();
+
+        ammoText.text = currentAmmo.ToString();
     }
 
     // Update is called once per frame
@@ -62,6 +68,10 @@ public class PlayerController : MonoBehaviour
                 if(currentAmmo > 0){
                     Ray ray = viewCam.ViewportPointToRay(new Vector3(.5f, .5f, 0f));
                     RaycastHit hit;
+
+                    currentAmmo--;
+                    gunAnim.SetTrigger("Shoot");
+
                     if(Physics.Raycast(ray, out hit))
                     {
                         Instantiate(bulletImpact, hit.point, transform.rotation);
@@ -75,8 +85,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("I'm looking at nothing");
                     }
                 }
-                currentAmmo--;
-                gunAnim.SetTrigger("Shoot");
+                UpdateAmmoUI();
             }
         }
     }
@@ -89,7 +98,10 @@ public class PlayerController : MonoBehaviour
         {
             deadScreen.SetActive(true);
             hasDied = true;
+            currentHealth = 0;
         } 
+
+        UpdateHealthUI();
     }
 
     public void AddHealth(int healAmount)
@@ -99,5 +111,17 @@ public class PlayerController : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+        UpdateHealthUI();
+    }
+
+    public void UpdateAmmoUI()
+    {
+        ammoText.text = currentAmmo.ToString();
+    }
+
+    public void UpdateHealthUI()
+    {
+        healthText.text = currentHealth.ToString() + " %";
     }
 }
