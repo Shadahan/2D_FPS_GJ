@@ -78,3 +78,11 @@ Changelog Legend :
 >- Enemy bullet system, it is shot towards the player.
 >- Health system, player takes dmg from enemy bullet.
 <br/><br/>
+
+>## 0.0.7
+>11/22/2021 • 7:18AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>- Fixed issues with ammo & health pickup where ammo count could go negative and healthpickups could oveheal the player.
+>- Hiden mouse cursor during gameplay, escape to bring it back.
+<br/><br/>
