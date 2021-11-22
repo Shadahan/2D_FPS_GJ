@@ -69,3 +69,12 @@ Changelog Legend :
 >
 >Added an enemy with a script attached to it. The enemy can chase the Player if he/she is in range. The enemy can be killed(with death animation).
 <br/><br/>
+
+>## 0.0.6
+>11/22/2021 • 5:10AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>- Added enemy shooting mechanic (When he gets in range, he start shooting. Can be a non shooting enemy as well).
+>- Enemy bullet system, it is shot towards the player.
+>- Health system, player takes dmg from enemy bullet.
+<br/><br/>
