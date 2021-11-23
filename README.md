@@ -108,3 +108,17 @@ Changelog Legend :
 >
 >- Added a functioning door.
 <br/><br/>
+
+>## 0.1.1
+>11/23/2021 • 7:06AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>- Added an AudioController.
+>- Added sounds for ammoPickup, healthPickup, enemyDeath, enemyShot, gunShot, playerHurt.
+
+> This concludes the Tutorial. The project has reached the same point as in the tutorial, but with a few bug fixes and improvements, such as: 
+>- Camera clipping through walls when near them;
+>- You can not fire bullets if you are left without any bullets;
+>- Ammo count stops at 0 (initially you could fire even without any bullets left, dealing no damage but triggering the gun shooting animation and makgin the currentAmmo go to negative values);
+>- HealthPickups do not overheal the player (initially, healthPickups would add more hit points to the player, going over 100hp);
+<br/><br/>
