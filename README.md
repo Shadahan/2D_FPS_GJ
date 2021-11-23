@@ -93,3 +93,11 @@ Changelog Legend :
 >
 >- Added head bubbing during movement of the player.
 <br/><br/>
+
+>## 0.0.9
+>11/23/2021 • 5:07AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>- Implemented Tilemap to use as level creator and editor.
+>- Added a second material to the wall asset, adding more details and an illusion of depth of the level.
+<br/><br/>
