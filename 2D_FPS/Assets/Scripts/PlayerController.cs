@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
 
                     currentAmmo--;
                     gunAnim.SetTrigger("Shoot");
+                    AudioController.instance.PlayGunShot();
 
                     if(Physics.Raycast(ray, out hit))
                     {
@@ -81,10 +82,10 @@ public class PlayerController : MonoBehaviour
                         {
                             hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
                         }
-                    } else 
-                    {
-                    Debug.Log("I'm looking at nothing");
-                    }
+                    } //else 
+                    //{
+                    //Debug.Log("I'm looking at nothing");
+                   // }
                 }
                 UpdateAmmoUI();
             }
@@ -109,6 +110,7 @@ public class PlayerController : MonoBehaviour
             currentHealth = 0;
         } 
 
+        AudioController.instance.PlayPlayerHurt();
         UpdateHealthUI();
     }
 
