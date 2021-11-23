@@ -101,3 +101,10 @@ Changelog Legend :
 >- Implemented Tilemap to use as level creator and editor.
 >- Added a second material to the wall asset, adding more details and an illusion of depth of the level.
 <br/><br/>
+
+>## 0.1.0
+>11/23/2021 • 5:41AM GMT+1
+> <span style="color:green">**Green**</span>
+>
+>- Added a functioning door.
+<br/><br/>
