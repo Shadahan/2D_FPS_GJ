@@ -137,5 +137,5 @@ Changelog Legend :
 > <span style="color:gold">**Yellow**</span>
 >
 >- Added DestroyBulletOverTime. In case the lvls are open spaces and the bullets don't hit anything, instead of flying into oblivion, they will get destroyed after 15 seconds.
--Made so that bullets would not be able to pass through walls.
+>- Made so that bullets would not be able to pass through walls.
 <br/><br/>
