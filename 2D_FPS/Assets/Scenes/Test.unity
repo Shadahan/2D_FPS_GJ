@@ -6636,7 +6636,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1941618195}
-  - component: {fileID: 1941618194}
   m_Layer: 0
   m_Name: Audio Controller
   m_TagString: Untagged
@@ -6644,24 +6643,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1941618194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941618193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d8100e1bafc184d88511b2a13278b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: {fileID: 1521716312}
-  health: {fileID: 1879997845}
-  enemyDeath: {fileID: 500491851}
-  enemyShot: {fileID: 993565963}
-  gunShot: {fileID: 995244203}
-  playerHurt: {fileID: 638150620}
 --- !u!4 &1941618195
 Transform:
   m_ObjectHideFlags: 0

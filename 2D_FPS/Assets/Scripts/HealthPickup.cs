@@ -21,7 +21,7 @@ public class HealthPickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player"){
             PlayerController.instance.AddHealth(healthAmount);
-            AudioController.instance.PlayHealthPickup();
+            AudioController.instance.PlayAudio(AudioController.instance.health);
             Destroy(gameObject);
         }
     }

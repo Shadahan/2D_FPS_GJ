@@ -23,39 +23,9 @@ public class AudioController : MonoBehaviour
         
     }
 
-    public void PlayAmmoPickup()
+    public void PlayAudio(AudioSource audio)
     {
-        ammo.Stop();
-        ammo.Play();
-    }
-
-    public void PlayHealthPickup()
-    {
-        health.Stop();
-        health.Play();
-    }
-
-    public void PlayEnemyDeath()
-    {
-        enemyDeath.Stop();
-        enemyDeath.Play();
-    }
-
-    public void PlayEnemyShot()
-    {
-        enemyShot.Stop();
-        enemyShot.Play();
-    }
-
-    public void PlayGunShot()
-    {
-        gunShot.Stop();
-        gunShot.Play();
-    }
-
-    public void PlayPlayerHurt()
-    {
-        playerHurt.Stop();
-        playerHurt.Play();
+        audio.Stop();
+        audio.Play();
     }
 }

@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 5f;
     public float mouseSensitivity = 1f;
+
+    //Trying
+    float maxAngle = 160;
+    float minAngle = 10;
+
     public int currentAmmo = 15;
 
     public int currentHealth;
@@ -62,6 +67,9 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z - mouseInput.x); //These two lines are the same idea, but with different implementations
             viewCam.transform.localRotation = Quaternion.Euler(viewCam.transform.localRotation.eulerAngles + new Vector3(0f, mouseInput.y, 0f));
 
+            //TRYING
+            Vector3 RotAmount = viewCam.transform.localRotation.eulerAngles + new Vector3 (0f, mouseInput.y, 0f);
+            viewCam.transform.localRotation = Quaternion.Euler(RotAmount.x, Mathf.Clamp(RotAmount.y, minAngle , maxAngle) , RotAmount.z);
 
             //Player Shooting
             if(Input.GetMouseButtonDown(0))
@@ -72,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
                     currentAmmo--;
                     gunAnim.SetTrigger("Shoot");
-                    AudioController.instance.PlayGunShot();
+                    AudioController.instance.PlayAudio(AudioController.instance.gunShot);
 
                     if(Physics.Raycast(ray, out hit))
                     {
@@ -110,7 +118,7 @@ public class PlayerController : MonoBehaviour
             currentHealth = 0;
         } 
 
-        AudioController.instance.PlayPlayerHurt();
+        AudioController.instance.PlayAudio(AudioController.instance.playerHurt);
         UpdateHealthUI();
     }
 
