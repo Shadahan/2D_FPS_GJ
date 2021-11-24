@@ -122,3 +122,10 @@ Changelog Legend :
 >- Ammo count stops at 0 (initially you could fire even without any bullets left, dealing no damage but triggering the gun shooting animation and makgin the currentAmmo go to negative values);
 >- HealthPickups do not overheal the player (initially, healthPickups would add more hit points to the player, going over 100hp);
 <br/><br/>
+
+>## 0.1.2
+>11/24/2021 • 4:23AM GMT+1
+> <span style="color:gold">**Yellow**</span>
+>
+>- Substituted multiple lines of code with a function in the AudioController and referenced it in other scripts.
+<br/><br/>
