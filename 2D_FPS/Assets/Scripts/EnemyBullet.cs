@@ -30,8 +30,11 @@ public class EnemyBullet : MonoBehaviour
         if(other.tag == "Player")
         {
             PlayerController.instance.TakeDamage(damageAmount);
-
+            Destroy(gameObject);
+        } else if (other.tag != "Enemy")
+        {
             Destroy(gameObject);
         }
+
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-
     public int health = 3;
     public float moveSpeed;
 
@@ -32,9 +31,10 @@ public class EnemyController : MonoBehaviour
             Vector3 playerDirection = PlayerController.instance.transform.position - transform.position;
 
             theRB.velocity = playerDirection.normalized * moveSpeed;
+            
 
             if(shouldShoot)
-            {
+            { 
                 shoutCounter -= Time.deltaTime;
                 if(shoutCounter <= 0)
                 {

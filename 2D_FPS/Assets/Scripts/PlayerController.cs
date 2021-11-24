@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z - mouseInput.x); //These two lines are the same idea, but with different implementations
             viewCam.transform.localRotation = Quaternion.Euler(viewCam.transform.localRotation.eulerAngles + new Vector3(0f, mouseInput.y, 0f));
 
-            //TRYING
+            //Camera clamp, no 360 rotation on the Y axis (in our case, the Z axis)
             Vector3 RotAmount = viewCam.transform.localRotation.eulerAngles + new Vector3 (0f, mouseInput.y, 0f);
             viewCam.transform.localRotation = Quaternion.Euler(RotAmount.x, Mathf.Clamp(RotAmount.y, minAngle , maxAngle) , RotAmount.z);
 
@@ -90,14 +90,12 @@ public class PlayerController : MonoBehaviour
                         {
                             hit.transform.parent.GetComponent<EnemyController>().TakeDamage();
                         }
-                    } //else 
-                    //{
-                    //Debug.Log("I'm looking at nothing");
-                   // }
+                    }
                 }
                 UpdateAmmoUI();
             }
 
+            //Head bobb animation
             if(moveInput != Vector2.zero){
                 playerAnim.SetBool("isMoving", true);
             } else 
