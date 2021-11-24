@@ -126,6 +126,8 @@ Changelog Legend :
 >## 0.1.2
 >11/24/2021 • 4:23AM GMT+1
 > <span style="color:gold">**Yellow**</span>
+> As of this update, multiple bug fixes are to be expected.
 >
 >- Substituted multiple lines of code with a function in the AudioController and referenced it in other scripts.
+>- Added a camera restriction with MatfClamp so that the player can not rotate the camera 360* on the Y axis (Z axis in our case).
 <br/><br/>
