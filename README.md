@@ -131,3 +131,11 @@ Changelog Legend :
 >- Substituted multiple lines of code with a function in the AudioController and referenced it in other scripts.
 >- Added a camera restriction with MatfClamp so that the player can not rotate the camera 360* on the Y axis (Z axis in our case).
 <br/><br/>
+
+>## 0.1.3
+>11/24/2021 • 12:30AM GMT+1
+> <span style="color:gold">**Yellow**</span>
+>
+>- Added DestroyBulletOverTime. In case the lvls are open spaces and the bullets don't hit anything, instead of flying into oblivion, they will get destroyed after 15 seconds.
+-Made so that bullets would not be able to pass through walls.
+<br/><br/>
