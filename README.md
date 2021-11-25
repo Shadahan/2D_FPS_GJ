@@ -148,3 +148,12 @@ Changelog Legend :
 >- Created 2 simple lvls for the Player to run around, kill enemies and pickup ammo & health.
 >- Created a simple way of transitioning from lvl to lvl (without saving the character progress in between). In case there are no more lvls to be loaded, the game will quit.
 <br/><br/>
+
+>## 0.1.4   Update
+>11/25/2021 • 6:08AM GMT+1
+> <span style="color:gold">**Yellow**</span>
+>
+>- Created and added an installer for the current version of the build.
+> Check the Installer folder, download and run the .exe file.
+<br/><br/>
+
