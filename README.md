@@ -139,3 +139,12 @@ Changelog Legend :
 >- Added DestroyBulletOverTime. In case the lvls are open spaces and the bullets don't hit anything, instead of flying into oblivion, they will get destroyed after 15 seconds.
 >- Made so that bullets would not be able to pass through walls.
 <br/><br/>
+
+>## 0.1.4
+>11/25/2021 • 6:08AM GMT+1
+> <span style="color:gold">**Yellow**</span>
+>
+>- Created a simple Main menu with Play & Exit buttons.
+>- Created 2 simple lvls for the Player to run around, kill enemies and pickup ammo & health.
+>- Created a simple way of transitioning from lvl to lvl (without saving the character progress in between). In case there are no more lvls to be loaded, the game will quit.
+<br/><br/>
